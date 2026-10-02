@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UsernamePro | Smart Username Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚡ Username<span>Pro</span>
+    </div>
+
+    <div class="nav-actions">
+
+        <span class="status">
+            <i></i> READY
+        </span>
+
+        <button class="theme-btn" id="themeBtn">
+            🌙
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="badge">
+            ✨ SMART USERNAME GENERATOR
+        </div>
+
+        <h1>
+            Create Your <span>Perfect Username</span>
+        </h1>
+
+        <p>
+            Generate creative username combinations instantly,
+            privately and locally in your browser.
+        </p>
+
+    </section>
+
+
+    <!-- GENERATOR -->
+
+    <section class="generator-card">
+
+        <div class="card-header">
+
+            <div>
+                <h2>Username Generator</h2>
+
+                <p>
+                    Customize your generation and create unique variations.
+                </p>
+            </div>
+
+            <div class="online-badge">
+                ● ONLINE
+            </div>
+
+        </div>
+
+
+        <div class="input-grid">
+
+            <div class="input-group">
+
+                <label>Rank / Prefix</label>
+
+                <input
+                    id="rank"
+                    type="text"
+                    placeholder="e.g. King, Mr, Pro"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Name</label>
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="e.g. Fahim"
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Symbols</label>
+
+                <input
+                    id="symbols"
+                    type="text"
+                    value="_-."
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Numbers</label>
+
+                <input
+                    id="numbers"
+                    type="text"
+                    value="1234567890"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="options">
+
+            <div class="option-box">
+
+                <label>Username Length</label>
+
+                <select id="length">
+
+                    <option value="0">
+                        Any Length
+                    </option>
+
+                    <option value="8">
+                        Up to 8
+                    </option>
+
+                    <option value="10">
+                        Up to 10
+                    </option>
+
+                    <option value="12">
+                        Up to 12
+                    </option>
+
+                    <option value="15">
+                        Up to 15
+                    </option>
+
+                    <option value="20">
+                        Up to 20
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="option-box">
+
+                <label>Number Mode</label>
+
+                <select id="numberMode">
+
+                    <option value="none">
+                        No Numbers
+                    </option>
+
+                    <option value="end">
+                        Add at End
+                    </option>
+
+                    <option value="start">
+                        Add at Start
+                    </option>
+
+                    <option value="both">
+                        Start + End
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="option-box">
+
+                <label>Format</label>
+
+                <select id="format">
+
+                    <option value="all">
+                        All Formats
+                    </option>
+
+                    <option value="lower">
+                        lowercase
+                    </option>
+
+                    <option value="upper">
+                        UPPERCASE
+                    </option>
+
+                    <option value="capital">
+                        Capitalized
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="option-box">
+
+    <label>Username Style</label>
+
+    <select id="usernameStyle">
+
+        <option value="classic">
+            Classic
+        </option>
+
+        <option value="gaming">
+            Gaming
+        </option>
+
+        <option value="minimal">
+            Minimal
+        </option>
+
+        <option value="cool">
+            Cool
+        </option>
+
+        <option value="pro">
+            Professional
+        </option>
+
+    </select>
+
+</div>
+
+
+            <div class="option-box">
+
+                <label>Result Limit</label>
+
+                <select id="resultLimit">
+
+                    <option value="20">
+                        20 Results
+                    </option>
+
+                    <option value="50" selected>
+                        50 Results
+                    </option>
+
+                    <option value="100">
+                        100 Results
+                    </option>
+
+                    <option value="250">
+                        250 Results
+                    </option>
+
+                    <option value="500">
+                        500 Results
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="button-row">
+
+            <button
+                class="generate-btn"
+                id="generateBtn"
+            >
+                ⚡ Generate Usernames
+            </button>
+
+            <button
+                class="secondary-btn"
+                id="randomBtn"
+            >
+                🎲 Randomize
+            </button>
+
+            <button
+                class="clear-btn"
+                id="clearBtn"
+            >
+                🧹 Clear
+            </button>
+
+        </div>
+
+    </section>
+
+<!-- USERNAME PREVIEW -->
+
+<section class="preview-card">
+
+    <div class="preview-header">
+        <span>👀</span>
+
+        <div>
+            <h3>Username Preview</h3>
+            <p>Preview your username style.</p>
+        </div>
+    </div>
+
+    <div class="preview-username" id="previewUsername">
+        YourUsername
+    </div>
+
+</section>
+    <!-- FEATURES -->
+
+    <section class="features">
+
+    <!-- FAST -->
+    <div class="feature clickable" onclick="runFeature('fast')">
+        <div class="feature-icon blue">⚡</div>
+
+        <div>
+            <h3>Fast</h3>
+            <p>Generate usernames instantly.</p>
+        </div>
+
+        <span class="feature-arrow">→</span>
+    </div>
+
+
+    <!-- SMART -->
+    <div class="feature clickable" onclick="runFeature('smart')">
+        <div class="feature-icon purple">✨</div>
+
+        <div>
+            <h3>Smart</h3>
+            <p>Create multiple smart username formats.</p>
+        </div>
+
+        <span class="feature-arrow">→</span>
+    </div>
+
+
+    <!-- PRIVATE -->
+    <div class="feature clickable" onclick="runFeature('private')">
+        <div class="feature-icon green">🔒</div>
+
+        <div>
+            <h3>Private</h3>
+            <p>Everything runs locally in your browser.</p>
+        </div>
+
+        <span class="feature-arrow">→</span>
+    </div>
+
+</section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="dashboard-mini">
+
+        <div>
+
+            <span>📊</span>
+
+            <div>
+
+                <strong id="totalGenerated">
+                    0
+                </strong>
+
+                <small>
+                    Total Generated
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <span>❤️</span>
+
+            <div>
+
+                <strong id="favoriteCount">
+                    0
+                </strong>
+
+                <small>
+                    Favorites
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <span>🕘</span>
+
+            <div>
+
+                <strong id="historyCount">
+                    0
+                </strong>
+
+                <small>
+                    History
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIP -->
+
+    <section class="tips">
+
+        <div class="tip-icon">
+            💡
+        </div>
+
+        <div>
+
+            <h3>
+                Quick Tip
+            </h3>
+
+            <p>
+                Try different prefixes, symbols and number modes
+                to create more variations.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FEATURE MODAL -->
+
+<div
+    class="feature-modal"
+    id="featureModal"
+    onclick="closeFeature(event)"
+>
+
+    <div
+        class="feature-modal-box"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="modal-close"
+            onclick="closeFeature()"
+        >
+            ×
+        </button>
+
+        <div
+            class="modal-icon"
+            id="modalIcon"
+        >
+            ⚡
+        </div>
+
+        <h2 id="modalTitle">
+            Fast
+        </h2>
+
+        <p id="modalText">
+            Generate usernames instantly.
+        </p>
+
+        <button
+            class="modal-ok"
+            onclick="closeFeature()"
+        >
+            Got it
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 UsernamePro
+        <span>•</span>
+        Smart Username Generator
+    </p>
+
+</footer>
+
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span id="toastIcon">
+        ✓
+    </span>
+
+    <span id="toastMessage">
+        Done
+    </span>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

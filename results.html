@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>UsernamePro | Results</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚡ Username<span>Pro</span>
+    </div>
+
+    <div class="nav-actions">
+
+        <span class="status">
+            <i></i> RESULTS
+        </span>
+
+        <button
+            class="theme-btn"
+            id="themeBtn"
+        >
+            🌙
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="container results-page">
+
+
+    <!-- HEADER -->
+
+    <section class="results-header">
+
+        <div>
+
+            <div class="badge">
+                🎯 GENERATED RESULTS
+            </div>
+
+            <h1>
+                Your <span>Usernames</span>
+            </h1>
+
+            <p id="resultInfo">
+                Your generated usernames are ready.
+            </p>
+
+        </div>
+
+
+        <button
+            class="secondary-btn"
+            id="backBtn"
+        >
+            ← Generate Again
+        </button>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <span>📊</span>
+
+            <div>
+
+                <strong id="resultCount">
+                    0
+                </strong>
+
+                <small>
+                    Results
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>❤️</span>
+
+            <div>
+
+                <strong id="pageFavoriteCount">
+                    0
+                </strong>
+
+                <small>
+                    Favorites
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <span>📏</span>
+
+            <div>
+
+                <strong id="averageLength">
+                    0
+                </strong>
+
+                <small>
+                    Average Length
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH AND TOOLS -->
+
+    <section class="results-tools">
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="🔎 Search usernames..."
+        >
+
+
+        <button
+            class="tool-btn"
+            id="favoriteFilter"
+        >
+            ❤️ Favorites
+        </button>
+
+
+        <button
+            class="tool-btn"
+            id="shuffleBtn"
+        >
+            🔀 Shuffle
+        </button>
+
+
+        <button
+            class="tool-btn"
+            id="copyAllBtn"
+        >
+            📋 Copy Filtered
+        </button>
+
+        <button
+           class="tool-btn"
+           id="copyEverythingBtn"
+>
+           📋 Copy All
+        </button>
+
+        <button
+            class="tool-btn"
+            id="downloadBtn"
+        >
+            ⬇️ Download
+        </button>
+
+
+        <button
+            class="tool-btn danger"
+            id="clearResultsBtn"
+        >
+            🗑️ Clear
+        </button>
+
+    </section>
+
+
+    <!-- RESULTS -->
+
+    <section class="results-card">
+
+        <div class="results-card-header">
+
+            <div>
+
+                <h2>
+                    Generated Usernames
+                </h2>
+
+                <p>
+                    Click ❤️ to Favorite / Unfavorite.
+                </p>
+
+            </div>
+
+            <span
+                class="result-number"
+                id="visibleCount"
+            >
+                0
+            </span>
+
+        </div>
+
+
+        <div
+            class="username-list"
+            id="usernameList"
+        ></div>
+
+
+        <div
+            class="empty-state"
+            id="emptyState"
+            style="display:none;"
+        >
+
+            <div>
+                🔎
+            </div>
+
+            <h3>
+                No usernames found
+            </h3>
+
+            <p>
+                Try another search or generate new usernames.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+
+    <section class="history-card">
+
+        <div class="history-header">
+
+            <div>
+
+                <h2>
+                    🕘 Generation History
+                </h2>
+
+                <p>
+                    Load previous results whenever you want.
+                </p>
+
+            </div>
+
+
+            <button
+                class="clear-history"
+                id="clearHistoryBtn"
+            >
+                Clear History
+            </button>
+
+        </div>
+
+
+        <div
+            id="historyList"
+            class="history-list"
+        ></div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 UsernamePro
+        <span>•</span>
+        Local Username Generator
+    </p>
+
+</footer>
+
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span id="toastIcon">
+        ✓
+    </span>
+
+    <span id="toastMessage">
+        Done
+    </span>
+
+</div>
+
+
+<script src="results.js"></script>
+
+</body>
+
+</html>
